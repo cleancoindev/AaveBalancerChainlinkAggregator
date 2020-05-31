@@ -114,10 +114,10 @@ contract AaveBalancer {
         bpool = IBPool(_addr);   
     }
     
-    function bindTokenToPoolAfterApprove(address _erc20Address, address _addr, uint _balance, uint _denorem) public {
+    function bindTokenToPoolAfterApprove(address _erc20Address, uint _balance, uint _denorem) public {
         erc20Token = IERC20(_erc20Address);
         erc20Token.approve(address(bpool), _balance);
-        bpool.bind(_addr, _balance, _denorem);
+        bpool.bind(_erc20Address, _balance, _denorem);
     }
     
     function finalize() public {
