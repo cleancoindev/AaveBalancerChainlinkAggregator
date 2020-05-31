@@ -21,7 +21,7 @@ Challenge is from price feeds of chainlink of the underlying assets, to build th
 4). Then set chainlink proxy contract.
 
     function setChainlinkProxyPriceProvideProxy(balancerPoolAddress)
-- It checks, If the returned price of balancer pool by chainlink aggregator is less than zero, otherwise  it will call to fallbackOracle which is governance by AAVE currently.
+- It checks, If the returned price of balancer pool by chainlink aggregator is less than zero then it will call to fallbackOracle which is governance by AAVE currently.
 
 5). Get latest answer of single token asset from ChainlinkProxyPriceProvider
 
