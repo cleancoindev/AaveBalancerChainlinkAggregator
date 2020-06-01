@@ -4,17 +4,17 @@ Challenge is from price feeds of chainlink of the underlying assets, to build th
 
 ## How Its Made?
 
-Written smart contract for create a balancer pool and One can manage their portfolio of balancer pool like, Add liquidity or bind tokens, Set controller and finalize for the balancer pool.
+Written smart contract for create a balancer pool and One can `manage their portfolio` of balancer pool like, Add liquidity or bind tokens, Set controller and finalize for the balancer pool.
 
-Written function for ChainlinkProxyPriceProvider and it will be understand the assets linked to a Balancer Pool token and their allocation, and give a reliable price to these tokens that will evolve accordingly to the underlying assets price fluctuations.
+Written function for `ChainlinkProxyPriceProvider` and it will be understand the assets linked to a Balancer Pool token and their allocation, and give a reliable price to these tokens that will evolve accordingly to the underlying assets price fluctuations.
 
-It checks, If the returned price of balancer pool by chainlink aggregator is less than zero, then it will call to fallbackOracle to get the asset price which is governance by AAVE currently.
+It checks, If the returned price of balancer pool by `chainlink aggregator` is less than zero, then it will call to `fallbackOracle` to get the asset price which is `governance by AAVE` currently.
 
 Call simply this function with your balancer pool address.
 
      function setChainlinkProxyPriceProvideProxy(address poolAddress) external;
 
-`Before calling bove function balancer pool should be finalize by the controller of pool. `
+`Before calling above function balancer pool should be finalize by the controller of pool. `
 
 ## Functionality of smart contract
 ### AaveBalancer.sol 
@@ -55,6 +55,3 @@ Call simply this function with your balancer pool address.
 
     function setLatestAnswersForTotalSupplyOfMultipleAssets(address poolAddress, address[] memory _assets)
 
-Other feature.  
-- one can mange own balancer pool.
-- one can set controller.
